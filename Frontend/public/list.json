@@ -1,0 +1,92 @@
+[
+    {
+    "id": 1,
+    "name": "The Adventure Begins",
+    "title": "A Chronicle of Exploration",
+    "price": 0,
+    "category": "Adventure",
+    "imageLink": "https://i.postimg.cc/nhRr2pNJ/BookId1.jpg",
+    "arrival": "new"
+    },
+    {
+    "id": 2,
+    "name": "Mastering the Craft",
+    "title": "A Guide to Baking Perfection",
+    "price": 24.50,
+    "category": "Cooking",
+    "imageLink": "https://i.postimg.cc/sXp3krH1/BookId2.jpg",
+    "arrival": "old"
+    },
+    {
+    "id": 3,
+    "name": "Symphony of Code",
+    "title": "Programming for Musicians",
+    "price": 32.95,
+    "category": "Technology",
+    "imageLink": "https://i.postimg.cc/5y4WDFFk/BookId3.jpg",
+    "arrival": "old"
+    },
+    {
+    "id": 4,
+    "name": "Whispers of the Ancients",
+    "title": "Myths and Legends of Forgotten Civilizations",
+    "price": 17.80,
+    "category": "History",
+    "imageLink": "https://i.postimg.cc/2SVrzv9s/BookId4.jpg",
+    "arrival": "old"
+    },
+    {
+    "id": 5,
+    "name": "Cosmic Canvas",
+    "title": "Exploring the Universe",
+    "price": 0,
+    "category": "Science",
+    "imageLink": "https://i.postimg.cc/0NSvSvsZ/BookId5.jpg",
+    "arrival": "new"
+    },
+    {
+    "id": 6,
+    "name": "The Artist's Way",
+    "title": "Unleashing Your Creative Potential",
+    "price": 0,
+    "category": "Art",
+    "imageLink": "https://i.postimg.cc/HL8Yt5Qw/BookId6.jpg",
+    "arrival": "new"
+    },
+    {
+    "id": 7,
+    "name": "Hidden in Plain Sight",
+    "title": "The Art of Deception and Camouflage",
+    "price": 22.00,
+    "category": "Nature",
+    "imageLink": "https://i.postimg.cc/QNJXSjWy/BookId7.jpg",
+    "arrival": "old"
+    },
+    {
+    "id": 8,
+    "name": "The Language of Flowers",
+    "title": "A Secret Code of Blooms and Blossoms",
+    "price": 0,
+    "category": "Gardening",
+    "imageLink": "https://i.postimg.cc/FzpNKx44/BookId8.jpg",
+    "arrival": "new"
+    },
+    {
+    "id": 9,
+    "name": "Myths & Mistakes in Fitness",
+    "title": "The Science Behind Getting Healthy",
+    "price": 21.50,
+    "category": "Health",
+    "imageLink": "https://i.postimg.cc/x86VQTvj/BookId9.jpg",
+    "arrival": "old"
+    },
+    {
+    "id": 10,
+    "name": "Globetrotter's Guide",
+    "title": "Travel Hacks for the Adventurous Soul",
+    "price": 0,
+    "category": "Travel",
+    "imageLink": "https://i.postimg.cc/BQZJVRTQ/BookId10.jpg",
+    "arrival": "new"
+    }
+]
