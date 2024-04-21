@@ -4,7 +4,17 @@ import bannerAniLight from "../../Images/bannerAni.gif";
 import bannerAniDark from "../../Images/bannerAniDark.gif";
 
 function Banner() {
- 
+  // console.log("From Banner", localStorage);
+  // const [mode, setMode] = useState("light");
+  // const handleMode = () => {
+  //   if (localStorage.theme === "light") {
+  //     setMode("light");
+  //     return bannerAniLight;
+  //   } else {
+  //     setMode("dark");
+  //     return bannerAniDark;
+  //   }
+  // };
 
   return (
     <>
@@ -35,11 +45,7 @@ function Banner() {
           </button>
         </div>
         <div className="md:w-1/2 flex justify-center items-center ">
-          <img
-            src={bannerAniLight}
-            className="  scale-75  "
-            alt=""
-          />
+          <img src={bannerAniLight} className="  scale-75  " alt="" />
         </div>
       </div>
     </>

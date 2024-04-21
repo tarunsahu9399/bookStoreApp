@@ -1,9 +1,10 @@
-import React from "react";
-import list from "../../public/list.json";
+import React, { useEffect, useState } from "react";
+// import list from "../../public/list.json";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Cards from "./Cards.jsx";
+import axios from "axios";
 
 function NewArrival() {
   var settings = {
@@ -41,7 +42,21 @@ function NewArrival() {
     ],
   };
 
-  const filterData = list.filter((data) => data.arrival === "new");
+  const [newBook, setNewBook] = useState([]);
+  useEffect(() => {
+    const getBook = async () => {
+      try {
+        const res = await axios.get("http://localhost:4001/book");
+        console.log(res.data);
+        setNewBook(res.data.filter((data) => data.arrival === "new"));
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getBook();
+  }, []);
+
+  // const filterData = list.filter((data) => data.arrival === "new");
 
   return (
     <>
@@ -60,7 +75,7 @@ function NewArrival() {
 
         <div>
           <Slider {...settings}>
-            {filterData.map((item) => (
+            {newBook.map((item) => (
               <Cards item={item} key={item.id} />
             ))}
           </Slider>

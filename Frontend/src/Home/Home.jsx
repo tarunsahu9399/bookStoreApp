@@ -8,8 +8,7 @@ function Home() {
   return (
     <>
       <Navbar />
-      <Banner />
-      
+      <Banner />     
       <NewArrival />
       <Footer />
     </>

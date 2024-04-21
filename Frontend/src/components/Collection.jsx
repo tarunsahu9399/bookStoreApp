@@ -1,19 +1,35 @@
 import React from "react";
-import list from "../../public/list.json";
+// import list from "../../public/list.json";
 import Cards from "./Cards";
 import { useState, useEffect } from "react";
 import { FaFilter } from "react-icons/fa";
 import { IconContext } from "react-icons";
+import axios from "axios";
 
 function Collection() {
+  const [bookList, setBookList] = useState([]);
   const [category, setCategory] = useState("");
-  const [filteredData, setFilteredData] = useState(list);
+  const [filteredData, setFilteredData] = useState([]);
+  useEffect(() => {
+    const getBook = async () => {
+      try {
+        const res = await axios.get("http://localhost:4001/book");
+        setBookList(res.data);
+        setFilteredData(res.data);
+        console.log(res.data);
+      } catch (error) {
+        console.log("Error in getBook", error);
+      }
+    };
+    getBook();
+  }, []);
 
+  
   const filterData = (selectedCategory) => {
     if (selectedCategory === "") {
-      setFilteredData(list);
+      setFilteredData(bookList);
     } else {
-      const filtered = list.filter(
+      const filtered = bookList.filter(
         (item) => item.category === selectedCategory
       );
       setFilteredData(filtered);
@@ -56,7 +72,7 @@ function Collection() {
               onChange={handleCategoryChange}
             >
               <option value="">All</option>
-              {list.map((item) => (
+              {bookList.map((item) => (
                 <option key={item.id} value={item.category}>
                   {item.category}
                 </option>
@@ -72,7 +88,7 @@ function Collection() {
         </div>
 
         {/* <div className="flex flex-wrap justify-center m-2">
-          {list.map((item) => (
+          {bookList.map((item) => (
             <Cards item={item} key={item.id} />
           ))}
         </div> */}
